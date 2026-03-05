@@ -2,7 +2,6 @@
 
 export const siteConfig = {
     name: "Destin Raceway",
-    // Yelp currently lists this location/phone under “Naskart Raceway”
     altNameNote: "Also known as Naskart Raceway",
 
     phoneDisplay: "(850) 269-2999",
