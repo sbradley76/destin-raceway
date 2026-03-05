@@ -1,12 +1,14 @@
-﻿import PlaceholderMedia from "../components/PlaceholderMedia.jsx";
+﻿import MediaFrame from "../components/MediaFrame.jsx";
+import PlaceholderMedia from "../components/PlaceholderMedia.jsx";
 import { siteConfig } from "../config/siteConfig";
 
-const galleryItems = Array.from({ length: 12 }).map((_, i) => ({
-    id: i + 1,
-    label: `Gallery image ${i + 1}`,
-}));
-
 export default function GalleryContact() {
+    const galleryItems = (siteConfig.media?.gallery || []).map((src, i) => ({
+        id: i + 1,
+        src,
+        alt: `Destin Raceway gallery image ${i + 1}`,
+    }));
+
     return (
         <div className="page">
             <div className="container">
@@ -14,23 +16,30 @@ export default function GalleryContact() {
                 <p className="lead">Photos now, more coming soon.</p>
 
                 <div className="gallery">
-                    {galleryItems.map((g) => (
-                        <PlaceholderMedia key={g.id} ratio="1/1" label={g.label} />
-                    ))}
+                    {galleryItems.length ? (
+                        galleryItems.map((g) => (
+                            <MediaFrame key={g.id} ratio="1/1" src={g.src} alt={g.alt} className="gallery-item" />
+                        ))
+                    ) : (
+                        Array.from({ length: 8 }).map((_, i) => (
+                            <PlaceholderMedia key={i} ratio="1/1" label={`Gallery image ${i + 1}`} />
+                        ))
+                    )}
                 </div>
 
                 <div className="panel contact-panel">
                     <div>
                         <h2 className="panel-title">Contact</h2>
                         <div className="contact-line">
-                            <strong>Phone:</strong>{" "}
-                            <a href={`tel:${siteConfig.phoneRaw}`}>{siteConfig.phoneDisplay}</a>
+                            <strong>Phone:</strong> <a href={`tel:${siteConfig.phoneRaw}`}>{siteConfig.phoneDisplay}</a>
                         </div>
                         <div className="contact-line">
                             <strong>Address:</strong> {siteConfig.addressLine1}, {siteConfig.addressLine2}
                         </div>
                         <div className="contact-actions">
-                            <a className="btn btn-primary" href={`tel:${siteConfig.phoneRaw}`}>Call</a>
+                            <a className="btn btn-primary" href={`tel:${siteConfig.phoneRaw}`}>
+                                Call
+                            </a>
                             <a className="btn btn-ghost" href={siteConfig.directionsUrl} target="_blank" rel="noreferrer">
                                 Directions
                             </a>

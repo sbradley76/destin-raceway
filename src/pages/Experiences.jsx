@@ -1,7 +1,13 @@
 ﻿import { siteConfig } from "../config/siteConfig";
+import MediaFrame from "../components/MediaFrame.jsx";
 import PlaceholderMedia from "../components/PlaceholderMedia.jsx";
 
 export default function Experiences() {
+    const imagesByTitle = {
+        "Dune Buggies (Oval Track)": siteConfig.media?.duneCard,
+        "Nascarts (Paved Track)": siteConfig.media?.nascartCard,
+    };
+
     return (
         <div className="page">
             <div className="container">
@@ -12,16 +18,23 @@ export default function Experiences() {
                     {siteConfig.experiences.map((x) => (
                         <div className="panel" key={x.title}>
                             <div className="panel-grid">
-                                <PlaceholderMedia ratio="4/3" label={`${x.title} photo`} />
+                                {imagesByTitle[x.title] ? (
+                                    <MediaFrame ratio="4/3" src={imagesByTitle[x.title]} alt={`${x.title} photo`} />
+                                ) : (
+                                    <PlaceholderMedia ratio="4/3" label={`${x.title} photo`} />
+                                )}
+
                                 <div>
                                     <h2 className="panel-title">{x.title}</h2>
                                     <div className="badge">{x.laps}</div>
                                     <ul className="bullets">
-                                        {x.highlights.map((h) => <li key={h}>{h}</li>)}
+                                        {x.highlights.map((h) => (
+                                            <li key={h}>{h}</li>
+                                        ))}
                                     </ul>
 
                                     <div className="panel-note">
-                                        <strong>Pricing:</strong> Add prices here (or “Call for today’s pricing”).
+                                        <strong>Pricing:</strong> Call for today’s pricing.
                                     </div>
                                 </div>
                             </div>

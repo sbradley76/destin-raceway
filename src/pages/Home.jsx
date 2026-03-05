@@ -4,10 +4,13 @@ import PlaceholderMedia from "../components/PlaceholderMedia.jsx";
 import ExperienceCard from "../components/ExperienceCard.jsx";
 import SwipeGallery from "../components/SwipeGallery.jsx";
 import ReviewsSection from "../components/ReviewsSection.jsx";
+import MediaFrame from "../components/MediaFrame.jsx";
 
 export default function Home() {
-    const galleryItems = Array.from({ length: 10 }).map((_, i) => ({
+    const galleryItems = (siteConfig.media?.gallery || []).map((src, i) => ({
         id: i + 1,
+        src,
+        alt: `Destin Raceway photo ${i + 1}`,
         label: `Photo ${i + 1}`,
     }));
 
@@ -46,11 +49,21 @@ export default function Home() {
                     </Reveal>
 
                     <Reveal className="hero2-media" delay={0.05}>
-                        <div className="media-frame">
-                            <PlaceholderMedia ratio="16/9" label="Short looping clip / hero photo" />
-                        </div>
+                        {siteConfig.media?.heroVideo ? (
+                            <MediaFrame
+                                type="video"
+                                ratio="16/9"
+                                src={siteConfig.media.heroVideo}
+                                poster={siteConfig.media.heroPoster}
+                                alt="Dune buggies on the oval track"
+                            />
+                        ) : (
+                            <div className="media-frame">
+                                <PlaceholderMedia ratio="16/9" label="Short looping clip / hero photo" />
+                            </div>
+                        )}
                         <div className="media-caption muted small">
-                            Tip: a 6–8 sec phone clip of a cart passing the camera works great here.
+                            If the video won’t autoplay on a phone, it will still play when tapped.
                         </div>
                     </Reveal>
                 </div>
@@ -61,9 +74,7 @@ export default function Home() {
                 <div className="container">
                     <Reveal>
                         <h2 className="h2">Pick your experience</h2>
-                        <p className="muted">
-                            Tap a card for details. Keep it safe, keep it fun.
-                        </p>
+                        <p className="muted">Tap a card for details. Keep it safe, keep it fun.</p>
                     </Reveal>
 
                     <div className="exp-grid">
@@ -78,6 +89,8 @@ export default function Home() {
                                     "Seatbelts required. Follow staff briefing.",
                                 ]}
                                 imageLabel="Dune buggy track photo"
+                                imageSrc={siteConfig.media?.duneCard}
+                                imageAlt="Dune buggy track in Destin"
                             />
                         </Reveal>
 
@@ -93,6 +106,8 @@ export default function Home() {
                                     "Seatbelts required. Follow staff briefing.",
                                 ]}
                                 imageLabel="Nascart track photo"
+                                imageSrc={siteConfig.media?.nascartCard}
+                                imageAlt="Nascarts on the paved track"
                             />
                         </Reveal>
                     </div>
@@ -133,9 +148,13 @@ export default function Home() {
                         </Reveal>
 
                         <Reveal delay={0.05}>
-                            <div className="media-frame">
-                                <PlaceholderMedia ratio="16/9" label="Lineup / track photo" />
-                            </div>
+                            {siteConfig.media?.expect ? (
+                                <MediaFrame ratio="16/9" src={siteConfig.media.expect} alt="Track and carts" />
+                            ) : (
+                                <div className="media-frame">
+                                    <PlaceholderMedia ratio="16/9" label="Lineup / track photo" />
+                                </div>
+                            )}
                         </Reveal>
                     </div>
                 </div>

@@ -2,8 +2,7 @@
 import { useState } from "react";
 import { siteConfig } from "../config/siteConfig";
 
-const linkClass = ({ isActive }) =>
-    "nav-link" + (isActive ? " active" : "");
+const linkClass = ({ isActive }) => "nav-link" + (isActive ? " active" : "");
 
 export default function Header() {
     const [open, setOpen] = useState(false);
@@ -17,14 +16,24 @@ export default function Header() {
                 </NavLink>
 
                 <nav className="nav-desktop">
-                    <NavLink to="/" className={linkClass}>Home</NavLink>
-                    <NavLink to="/experiences" className={linkClass}>Experiences</NavLink>
-                    <NavLink to="/groups" className={linkClass}>Groups</NavLink>
-                    <NavLink to="/gallery" className={linkClass}>Gallery / Contact</NavLink>
+                    <NavLink to="/" className={linkClass}>
+                        Home
+                    </NavLink>
+                    <NavLink to="/experiences" className={linkClass}>
+                        Experiences
+                    </NavLink>
+                    <NavLink to="/groups" className={linkClass}>
+                        Groups
+                    </NavLink>
+                    <NavLink to="/gallery" className={linkClass}>
+                        Gallery / Contact
+                    </NavLink>
                 </nav>
 
                 <div className="header-cta">
-                    <a className="btn btn-ghost" href={`tel:${siteConfig.phoneRaw}`}>Call</a>
+                    <a className="btn btn-ghost" href={`tel:${siteConfig.phoneRaw}`}>
+                        Call
+                    </a>
                     <a className="btn btn-primary" href={siteConfig.directionsUrl} target="_blank" rel="noreferrer">
                         Directions
                     </a>
@@ -45,13 +54,23 @@ export default function Header() {
             {open && (
                 <div className="mobile-menu">
                     <div className="container mobile-menu-inner">
-                        <NavLink to="/" className={linkClass} onClick={() => setOpen(false)}>Home</NavLink>
-                        <NavLink to="/experiences" className={linkClass} onClick={() => setOpen(false)}>Experiences</NavLink>
-                        <NavLink to="/groups" className={linkClass} onClick={() => setOpen(false)}>Groups</NavLink>
-                        <NavLink to="/gallery" className={linkClass} onClick={() => setOpen(false)}>Gallery / Contact</NavLink>
+                        <NavLink to="/" className={linkClass} onClick={() => setOpen(false)}>
+                            Home
+                        </NavLink>
+                        <NavLink to="/experiences" className={linkClass} onClick={() => setOpen(false)}>
+                            Experiences
+                        </NavLink>
+                        <NavLink to="/groups" className={linkClass} onClick={() => setOpen(false)}>
+                            Groups
+                        </NavLink>
+                        <NavLink to="/gallery" className={linkClass} onClick={() => setOpen(false)}>
+                            Gallery / Contact
+                        </NavLink>
 
                         <div className="mobile-menu-cta">
-                            <a className="btn btn-ghost" href={`tel:${siteConfig.phoneRaw}`}>Call</a>
+                            <a className="btn btn-ghost" href={`tel:${siteConfig.phoneRaw}`}>
+                                Call
+                            </a>
                             <a className="btn btn-primary" href={siteConfig.directionsUrl} target="_blank" rel="noreferrer">
                                 Directions
                             </a>

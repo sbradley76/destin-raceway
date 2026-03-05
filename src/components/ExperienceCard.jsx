@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import PlaceholderMedia from "./PlaceholderMedia.jsx";
+import MediaFrame from "./MediaFrame.jsx";
 
 export default function ExperienceCard({
     title,
@@ -8,6 +9,8 @@ export default function ExperienceCard({
     highlights,
     details,
     imageLabel = "Experience photo",
+    imageSrc,
+    imageAlt,
 }) {
     const [open, setOpen] = useState(false);
 
@@ -20,7 +23,11 @@ export default function ExperienceCard({
             aria-expanded={open}
         >
             <div className="exp-card-media">
-                <PlaceholderMedia ratio="4/3" label={imageLabel} />
+                {imageSrc ? (
+                    <MediaFrame ratio="4/3" src={imageSrc} alt={imageAlt || imageLabel} />
+                ) : (
+                    <PlaceholderMedia ratio="4/3" label={imageLabel} />
+                )}
                 <div className="exp-card-badge">{laps}</div>
             </div>
 
@@ -58,7 +65,8 @@ export default function ExperienceCard({
                                     </ul>
                                 ) : (
                                     <p className="muted">
-                                        Add a short description here (pricing, requirements, what to expect).
+                                        Add a short description here (pricing, requirements, what to
+                                        expect).
                                     </p>
                                 )}
                             </div>
