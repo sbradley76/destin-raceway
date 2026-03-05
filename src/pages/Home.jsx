@@ -3,6 +3,7 @@ import Reveal from "../components/Reveal.jsx";
 import PlaceholderMedia from "../components/PlaceholderMedia.jsx";
 import ExperienceCard from "../components/ExperienceCard.jsx";
 import SwipeGallery from "../components/SwipeGallery.jsx";
+import ReviewsSection from "../components/ReviewsSection.jsx";
 
 export default function Home() {
     const galleryItems = Array.from({ length: 10 }).map((_, i) => ({
@@ -97,6 +98,8 @@ export default function Home() {
                     </div>
                 </div>
             </section>
+
+            <ReviewsSection />
 
             {/* WHAT TO EXPECT */}
             <section className="section2 soft">

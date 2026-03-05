@@ -31,4 +31,28 @@
             ],
         },
     ],
+
+    reviews: {
+        sourceName: "Yelp",
+        sourceUrl: "https://www.yelp.com/biz/naskart-raceway-destin",
+        overallRating: 5.0, // 5.0 (3 reviews) on Yelp :contentReference[oaicite:1]{index=1}
+        reviewCount: 3,
+        items: [
+            {
+                name: "Ryan K.",
+                date: "Jul 10, 2025",
+                text: "“Awesome place, kids had a blast, and reasonably priced! Owner is a super nice guy! We went twice in one day!”",
+            }, // :contentReference[oaicite:2]{index=2}
+            {
+                name: "Josh W.",
+                date: "Aug 18, 2019",
+                text: "“The can am dirt track was my boys’ favorite part of our trip… very patient and welcoming.”",
+            }, // :contentReference[oaicite:3]{index=3}
+            {
+                name: "Jennifer B.",
+                date: "Sep 21, 2017",
+                text: "“We had so much fun! Fast karts, great service, excellent price.”",
+            }, // :contentReference[oaicite:4]{index=4}
+        ],
+    },
 };

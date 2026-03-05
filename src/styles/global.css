@@ -633,3 +633,78 @@ a {
         align-items: start;
     }
 }
+
+
+/* Reviews */
+.reviews-head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+}
+
+.reviews-sub {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 6px;
+}
+
+.stars {
+    display: inline-flex;
+    gap: 3px;
+    font-size: 14px;
+    line-height: 1;
+    color: var(--accent);
+    letter-spacing: -1px;
+}
+
+.reviews-row {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    padding-bottom: 6px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+
+.review-card {
+    flex: 0 0 86%;
+    scroll-snap-align: start;
+    background: rgba(255,255,255,.84);
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    padding: 14px;
+    box-shadow: var(--shadow);
+}
+
+.review-text {
+    margin: 10px 0 10px;
+    color: rgba(11,27,42,.78);
+    line-height: 1.55;
+    font-weight: 650;
+}
+
+.review-meta {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+}
+
+.review-name {
+    font-weight: 950;
+}
+
+@media (min-width: 860px) {
+    .reviews-row {
+        overflow: visible;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .review-card {
+        flex: auto;
+    }
+}
