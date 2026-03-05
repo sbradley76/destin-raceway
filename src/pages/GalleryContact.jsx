@@ -1,4 +1,4 @@
-import PlaceholderMedia from "../components/PlaceholderMedia.jsx";
+﻿import PlaceholderMedia from "../components/PlaceholderMedia.jsx";
 import { siteConfig } from "../config/siteConfig";
 
 const galleryItems = Array.from({ length: 12 }).map((_, i) => ({

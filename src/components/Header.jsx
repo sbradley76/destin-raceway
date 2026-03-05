@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+ï»¿import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import { siteConfig } from "../config/siteConfig";
 
@@ -13,7 +13,7 @@ export default function Header() {
             <div className="container header-inner">
                 <NavLink to="/" className="brand" onClick={() => setOpen(false)}>
                     <div className="brand-title">{siteConfig.name}</div>
-                    <div className="brand-sub">Dune Buggies • Nascarts • Destin, FL</div>
+                    <div className="brand-sub">Dune Buggies â€¢ Nascarts â€¢ Destin, FL</div>
                 </NavLink>
 
                 <nav className="nav-desktop">

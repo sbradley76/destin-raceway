@@ -1,6 +1,6 @@
-export const siteConfig = {
+Ôªøexport const siteConfig = {
     name: "Destin Raceway",
-    // Yelp currently lists this location/phone under ìNaskart Racewayî
+    // Yelp currently lists this location/phone under ‚ÄúNaskart Raceway‚Äù
     altNameNote: "Also known as Naskart Raceway",
     phoneDisplay: "(850) 269-2999",
     phoneRaw: "+18502692999",
@@ -16,7 +16,7 @@ export const siteConfig = {
             laps: "10 laps",
             highlights: [
                 "Kids can ride with supervision",
-                "Adults: no racing ó safe driving only",
+                "Adults: no racing ‚Äî safe driving only",
                 "Seatbelts required",
             ],
         },

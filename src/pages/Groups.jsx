@@ -1,4 +1,4 @@
-import PlaceholderMedia from "../components/PlaceholderMedia.jsx";
+Ôªøimport PlaceholderMedia from "../components/PlaceholderMedia.jsx";
 import { siteConfig } from "../config/siteConfig";
 
 export default function Groups() {
@@ -18,7 +18,7 @@ export default function Groups() {
                                 <li>Family trips</li>
                                 <li>Friends / teens</li>
                                 <li>Birthday stops</li>
-                                <li>Quick ìsomething funî outing</li>
+                                <li>Quick ‚Äúsomething fun‚Äù outing</li>
                             </ul>
                             <a className="btn btn-primary" href={`tel:${siteConfig.phoneRaw}`}>Call Now</a>
                         </div>

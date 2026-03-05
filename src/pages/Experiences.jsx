@@ -1,4 +1,4 @@
-import { siteConfig } from "../config/siteConfig";
+Ôªøimport { siteConfig } from "../config/siteConfig";
 import PlaceholderMedia from "../components/PlaceholderMedia.jsx";
 
 export default function Experiences() {
@@ -6,7 +6,7 @@ export default function Experiences() {
         <div className="page">
             <div className="container">
                 <h1>Experiences</h1>
-                <p className="lead">Simple, safe, and fun ó pick your laps.</p>
+                <p className="lead">Simple, safe, and fun ‚Äî pick your laps.</p>
 
                 <div className="stack">
                     {siteConfig.experiences.map((x) => (
@@ -21,7 +21,7 @@ export default function Experiences() {
                                     </ul>
 
                                     <div className="panel-note">
-                                        <strong>Pricing:</strong> Add prices here (or ìCall for todayís pricingî).
+                                        <strong>Pricing:</strong> Add prices here (or ‚ÄúCall for today‚Äôs pricing‚Äù).
                                     </div>
                                 </div>
                             </div>
@@ -35,7 +35,7 @@ export default function Experiences() {
                         <li>Seatbelts required.</li>
                         <li>Kids may ride with supervision.</li>
                         <li>No aggressive driving or excessive bumping.</li>
-                        <li>Listen to the staff ó safety briefing before driving.</li>
+                        <li>Listen to the staff ‚Äî safety briefing before driving.</li>
                     </ul>
                 </div>
             </div>

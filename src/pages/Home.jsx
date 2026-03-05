@@ -1,4 +1,4 @@
-import { siteConfig } from "../config/siteConfig";
+Ôªøimport { siteConfig } from "../config/siteConfig";
 import Reveal from "../components/Reveal.jsx";
 import PlaceholderMedia from "../components/PlaceholderMedia.jsx";
 import ExperienceCard from "../components/ExperienceCard.jsx";
@@ -16,11 +16,11 @@ export default function Home() {
             <section className="hero2">
                 <div className="container hero2-grid">
                     <Reveal className="hero2-copy">
-                        <div className="pill">Family-friendly ï Affordable ï Quick stop</div>
+                        <div className="pill">Family-friendly ‚Ä¢ Affordable ‚Ä¢ Quick stop</div>
 
                         <h1 className="h1">
                             Destin Raceway
-                            <span className="h1-sub">10 laps in a dune buggy ï 20 laps in a nascart</span>
+                            <span className="h1-sub">10 laps in a dune buggy ‚Ä¢ 20 laps in a nascart</span>
                         </h1>
 
                         <p className="lead2">
@@ -49,7 +49,7 @@ export default function Home() {
                             <PlaceholderMedia ratio="16/9" label="Short looping clip / hero photo" />
                         </div>
                         <div className="media-caption muted small">
-                            Tip: a 6ñ8 sec phone clip of a cart passing the camera works great here.
+                            Tip: a 6‚Äì8 sec phone clip of a cart passing the camera works great here.
                         </div>
                     </Reveal>
                 </div>
@@ -73,7 +73,7 @@ export default function Home() {
                                 highlights={siteConfig.experiences[0].highlights}
                                 details={[
                                     "Kids can ride with supervision.",
-                                    "Adults: no racing on dune buggies ó safe driving only.",
+                                    "Adults: no racing on dune buggies ‚Äî safe driving only.",
                                     "Seatbelts required. Follow staff briefing.",
                                 ]}
                                 imageLabel="Dune buggy track photo"
@@ -109,7 +109,7 @@ export default function Home() {
                                     <div className="step-num">1</div>
                                     <div>
                                         <div className="step-title">Arrive</div>
-                                        <div className="muted">Easy stop while youíre in Destin.</div>
+                                        <div className="muted">Easy stop while you‚Äôre in Destin.</div>
                                     </div>
                                 </div>
                                 <div className="step">
@@ -123,7 +123,7 @@ export default function Home() {
                                     <div className="step-num">3</div>
                                     <div>
                                         <div className="step-title">Run your laps</div>
-                                        <div className="muted">Controlled fun ó no aggressive driving.</div>
+                                        <div className="muted">Controlled fun ‚Äî no aggressive driving.</div>
                                     </div>
                                 </div>
                             </div>
@@ -168,7 +168,7 @@ export default function Home() {
                                 </div>
 
                                 <div className="muted small" style={{ marginTop: 10 }}>
-                                    Tip: add a ìlook for the entrance signî note once you confirm it.
+                                    Tip: add a ‚Äúlook for the entrance sign‚Äù note once you confirm it.
                                 </div>
                             </div>
 
